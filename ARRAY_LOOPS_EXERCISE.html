@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ARRAY-LOOPS-EXERCISE</title>
+</head>
+<body>
+    <script>
+        /* 1) Create an array of numbers [5,6]. Add 4 at the beginning and 
+              7 at the end of the array.
+           2) Create a method to return an element at a particular positionin the array.
+           3) Create an array copy using slice method.
+           4) Create a while loop that exits after counting 5 prime numbers.
+           5) Modify the above loop to finish using break.
+           6) Create a for loop that prints number 1 to 10 in reverse order.
+           7) Using continue only print positive numbers from the given array [1,-6,5,7,-98]
+           8) Using accumulator pattern concatenate all the strings in the given array
+              ['Karan','Coding','Javascript','Course','is','best']  */
+            
+        // solution 1
+            let arr = [5,6]
+            console.log(arr);
+            arr.push(7);
+            console.log(arr);
+            arr.unshift(4);
+            console.log(arr);
+
+         // solution 2
+            function getElement(array, position) {
+                return array[position];     // position values will be 0 to 8, but if we write "position - 1" then values will be 1 to 9.
+            }
+            let array = [2,9,3,7,5,6,8,4,1];   
+            console.log(getElement(array,8));
+
+        // solution 3
+            let karan = [4,5,6,7];
+            function karanCopy(arr) {
+                return karan.slice(0, arr.length);
+            }
+            let karan2 = karanCopy(karan);
+            karan2[0] = null;    // we are changing this value to check that we are geting correct copy or not
+            console.log(karan);
+            console.log(karan2);
+
+        // solution 4    
+    </script>
+</body>
+</html>
