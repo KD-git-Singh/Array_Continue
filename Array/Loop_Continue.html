@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Loop-Break-Continue</title>
+</head>
+<body>
+    <script>
+        // read 9:54:00 TO 9:56:00
+
+        // "Break" Property
+        for (let i = 0; i < 50; i++) {
+            console.log(i);
+            if (i==22) {      // as we can see that "i < 50" that means it will run from 0 to 49
+                break;        // but with this "break" property the loop will stop at 22.
+            }            
+        }
+
+        let arr = [1,3,4,5,7,9,2];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === 7) {          // "7" is stored at 4th index
+                console.log(`Number found at index ${i}`);
+                break;
+            }
+            console.log('Still Looking')
+        }
+        // "Continue" Property
+        for (let i = 1; i<=25; i++) {
+          if (i % 2 == 0) {       // this will print even values only & for odd values write == 1.
+             continue;            // but if we add "continue property this will take us to the START"
+          }  
+            console.log(i);
+           // if the condition i % 2 == 0 is false then it will go to console.log ,but if the condition is true then it will go at START.
+        }
+
+
+
+    </script>
+</body>
+</html>
