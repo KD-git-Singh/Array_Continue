@@ -15,7 +15,44 @@
         console.log(doosra[3]);
 
         console.log(Array.isArray(doosra));  // Array.isArray() is used to check wether given input is array or not.
-
+/***********************************************/
+        let arr = [1,6,4,8];
+        console.log(arr);
+        arr.push(1999);  // 'push' property will add element in last position
+        console.log(arr);
+        arr.pop();  // 'pop' property will remove element from last position
+        console.log(arr);
+        let popped = arr.pop();  // we can also store the popped element into new element
+        console.log(popped);
+/***************************************************/
+        let newArr = [9,1,6,5,7,8]
+        console.log(newArr);
+        newArr.shift()    // 'shift' property will remove element from the 0th index.
+        console.log(newArr);
+        newArr.unshift(1999);  // 'unshift' will add the element on 0th position.
+        console.log(newArr);
+/***********************************************/
+        let SINGH = [3,5,9,1];
+        console.log(SINGH);
+        SINGH.splice(1, 2);  // 'splice' property is used to cut element within from array, in this example, 1 is INDEX no. & 2 is no. of counts. i.e. no. of elements needs to be cut.
+        console.log(SINGH);
+/***********************************************/
+        let LODHA = [5,7,1,6,3];
+        console.log(LODHA);
+        console.log(LODHA.toString());    // 'toString' property will give the o/p in only elements and it auto remove the brackets & array length. i.e. o/p 5,7,1,6,3
+/***********************************************/
+        let KSL = [5,1,4,9,2,5]
+        console.log(KSL);
+        KSL.sort();        // 'sort' property is used to sort elements in acending order.
+        console.log(KSL);
+/***********************************************/
+        // we can also put an ARRAY into another ARRAY
+        let arr2 = KSL;
+        arr2[0] = 1999;   //we can also reset & replace the values by providing INDEX value.
+        console.log(KSL);
+        // we can also de-structure an ARRAY
+        let [a,b,c,d] = KSL;
+        console.log(a + ' ' + b + ' ' + c + ' ' + d)
     </script>
 </body>
 </html>
