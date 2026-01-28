@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>ARRAY-LOOPS-EXERCISE</title>
 </head>
+
 <body>
     <script>
         /* 1) Create an array of numbers [5,6]. Add 4 at the beginning and 
@@ -15,33 +17,90 @@
            7) Using continue only print positive numbers from the given array [1,-6,5,7,-98]
            8) Using accumulator pattern concatenate all the strings in the given array
               ['Karan','Coding','Javascript','Course','is','best']  */
-            
-        // solution 1
-            let arr = [5,6]
-            console.log(arr);
-            arr.push(7);
-            console.log(arr);
-            arr.unshift(4);
-            console.log(arr);
 
-         // solution 2
-            function getElement(array, position) {
-                return array[position];     // position values will be 0 to 8, but if we write "position - 1" then values will be 1 to 9.
-            }
-            let array = [2,9,3,7,5,6,8,4,1];   
-            console.log(getElement(array,8));
+        // solution 1
+        let arr = [5, 6]
+        console.log(arr);
+        arr.push(7);
+        console.log(arr);
+        arr.unshift(4);
+        console.log(arr);
+
+        // solution 2
+        function getElement(array, position) {
+            return array[position];     // position values will be 0 to 8, but if we write "position - 1" then values will be 1 to 9.
+        }
+        let array = [2, 9, 3, 7, 5, 6, 8, 4, 1];
+        console.log(getElement(array, 8));
 
         // solution 3
-            let karan = [4,5,6,7];
-            function karanCopy(arr) {
-                return karan.slice(0, arr.length);
-            }
-            let karan2 = karanCopy(karan);
-            karan2[0] = null;    // we are changing this value to check that we are geting correct copy or not
-            console.log(karan);
-            console.log(karan2);
+        let karan = [4, 5, 6, 7];
+        function karanCopy(arr) {
+            return karan.slice(0, arr.length);
+        }
+        let karan2 = karanCopy(karan);
+        karan2[0] = null;    // we are changing this value to check that we are geting correct copy or not
+        console.log(karan);
+        console.log(karan2);
 
         // solution 4    
+        function isPrime(num) {
+            for (let i = 2; i < num; i++) {    // we didn't write i = 0 or 1 because 0 is not divisible & 1 is divisible by everything
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        // console.log(isPrime(5));
+        // console.log(isPrime(9));
+        // console.log(isPrime(11));
+        // console.log(isPrime(12));
+
+        //A while loop in JavaScript repeatedly executes a block of code as long as a specified condition remains true
+        let num = 2;
+        let i = 0;
+        while (i < 5) {            
+          if (isPrime(num)) {
+            console.log(num);
+            i++;
+          }
+          num++;
+        }
+
+        // solution 5
+        // replace line 63 with while (true)
+        // add after line 66, if (i >=5) {break}
+        
+        console.log('Solution 6')
+        // solution 6
+        for (let i = 0; i < 10; i++) {
+            console.log(10- i);
+        }
+          // OR
+        for (let i = 10; i > 0; i--) {
+            console.log(i);
+        } 
+        console.log('Solution 7')
+        // solution 7
+        let nums = [1,-6,5,7,-98,98];
+        for (let i = 0; i < nums.length; i++) {
+           if (nums[i] < 0) continue;
+           console.log(nums[i]); 
+        }
+
+        console.log('Solution 8')
+        // solution 8
+        let string = ['Karan', 'coding', 'JavaScript', 'Course','is','Best'];
+        console.log(string);
+        let result = '';
+        for (let i = 0; i < nums.length; i++) {
+            result = result + string[i] + ' ';
+        }
+        console.log(result);
+        console.log(string.join(" "));   // there is direct method to add these string in single line
+        console.log(string.join(","));   
     </script>
 </body>
+
 </html>
