@@ -5,3 +5,36 @@ body {
 #main-heading {
     text-align: center;
 }
+
+.grid-container {
+    display: grid;    /* grid property is used when multiple element needs to take equal space*/
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 5px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+#todo-input, #todo-date {
+    font-size: 15px;
+    padding: 10px 5px;
+}
+
+.btn-delete {
+    background-color: rgb(208, 81, 81);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 0px;
+    cursor: pointer;       /*this property shows a button is click-able when the cursor is on it*/
+
+}
+
+.btn-todo {
+   background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 0px;
+    cursor: pointer;  
+}

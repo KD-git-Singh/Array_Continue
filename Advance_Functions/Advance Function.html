@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advanced Functions</title>
+</head>
+<body>
+    <script>
+        // Anonymous Functions as Values
+
+        let sum = function (num1, num2) {   // if we don't use "let sum =" and directly assign function, then it will give error
+            return num1 + num2;   //that why we needs to put that function in a variable. i.e. sum 
+        };
+        console.log(sum(4, 5));
+
+        // Problem. ((4+5)+7)
+        let sumThreeNumbers = function (num1, num2, num3, sumTwoNumbers) {
+            let sum1 = sumTwoNumbers(num1, num2);
+            return sumTwoNumbers(sum1, num3);
+        }
+        console.log(sumThreeNumbers(4,5,6, sum));
+
+/******************************************************************/
+        // Arrow Functions
+        
+        let add = (num4, num5) => {        // as we can see on line 10 we putted function in 'sum' variable
+            return num4 + num5;            // but we don't need to actually write "function" when we are storing it inside a variable
+        }                                  // instead we can simply write "=>" which is called arrow function
+        console.log(add(6, 8));
+
+        let square = num => num*num;      // usually we use brackets around num i.e. "()". but if there is only single argument/parameter then we can ignore the brackets
+        //                                // and if we have single line function definition i.e. "return=num*num", then we can also remove the Camel brackets & "return".
+        console.log(square(5));           // sometime we get confused wether it is a function or not. So we have to see if there is "=>" available
+/******************************************************************/
+        //setTimeout & setInterval 
+
+        // setTimeout
+        let alarm = function() {
+            console.log('Subaha ho gyi mamu, uth ja')
+        };
+        setTimeout(alarm, 2000);   // so with the help of 'setTimeout', the 'alarm' function will execute after 2000 mili seconds i.e. 2 sec.
+         
+            // we can also use "timerId" to check how many time it has executed
+        
+        let clock =() => console.log('Subaha ho gyi mamu, uth ja');
+        let timerId = setTimeout(clock, 5000);
+        console.log(`Alarm set with timerId:${timerId}`);
+        clearTimeout(timerId);   // we our work is finished we can also cancel the "timerId"
+        
+        // setInterval
+        let waqt = () => console.log(`rakh teri maa ki rakhh. ${new Date()} `); 
+        setInterval(waqt, 6000); // by using setInterval we can execute "waqt" continuously
+
+           // to stop this "setInterval" we use "intervalId"
+        let samay = () => console.log(`Nikal le, pit dunga nahi to. ${new Date()} `); 
+        let intervalId = setInterval(samay, 6000);   
+        clearInterval(intervalId);  // now it want be executed
+
+           // Usually we want something to execute atleast few time like 4-5 times and then stops it. See below eg for reference
+        let mossam = () => console.log(`Kya dekh raha hai. ${new Date()}`); 
+        let intervalIds = setInterval(mossam, 1000);   
+        setTimeout(() => clearInterval(intervalIds), 5000);    // here we used "anonymous function" inside setTimeout
+/***********************************************************************************/
+
+        // Event Listener
+        
+    </script>
+</body>
+</html>

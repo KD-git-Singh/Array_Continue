@@ -7,9 +7,14 @@
 <body>
     <h1 id="main-heading">TODO APP</h1>
 
+    <div class="grid-container">
     <input id="todo-input" type="text" placeholder="Enter Todo here">
-    <button onclick="addTodo()">Add</button>
-    <p id="todo-items"></p>
+    <input id="todo-date" type="date">
+    <button class="btn-todo" onclick="addTodo()">Add</button>
+    </div>
+
+    <div class="todo-container grid-container"></div>    
+    <!-- we can put 2 class name in single class -->
 
     <script src="3-TODO-App.js"></script>
 </body>

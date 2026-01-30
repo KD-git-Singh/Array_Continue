@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+        // While Loop
+        let num = 1;  // Initialization
+        while (num <= 10) {    // condition
+            console.log(num);
+            num = num + 1;     // updating
+        }
+        console.log('final updated value is ' + num);  
+/*****************************************************************************/
+        // Do While Loop
+        let nums =0;
+        do{                       // 'Do While' is uses when we want to execute our code atleast one time even if the condition is FALSE.
+            console.log(nums);
+            num++;
+        } while (nums > 5);   // As we can see that we have defined nums = 0 so it is not greater than 5. Contion is FALSE
+/*****************************************************************************/
+        // 'for' Loop
+        for (let arr = 1; arr <=10; arr++) {
+            console.log(arr);
+        }
+
+        let bub = [5,98,-65,2,53,1999]
+        for (let i = 0; i < bub.length; i++) {      // we use "i" short for INDEX value
+            console.log(bub[i]);         //if we don't know the array length (i.e. total no. of elements it holds) then we use "bub.length" 'bub' is the name of array.   
+        }
+/****************************************************************************/
+        // Accumulator Pattern
+        /* 1) A pattern to accumulate values through looping
+           2) eg. a) Commonly used to sum of numbers in an ARRAy
+                  b) Create a modified copy of an ARRAY */
+        let numbers = [4,6,8,9,2,1,3,7,5,,21,13]
+        let sum = 0;
+                          
+    </script>
+</body>
+</html>
