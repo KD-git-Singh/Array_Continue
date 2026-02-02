@@ -4,7 +4,25 @@
     <title>Advanced Functions</title>
 </head>
 <body>
+    <button id="my-btn">Click Me</button>
     <script>
+        // Event Listener (study it after setTimeout & setInterval)
+
+        let btnElement = document.querySelector('#my-btn');
+        let behaviour = event => {console.log('I am Ckicked')};
+        btnElement.addEventListener('click', behaviour);          // 'addEventListener' works similar to the 'onClick', only diff. is 'addEventListener' works in JS and 'onclick' works in HTML.
+
+          // we can add mulitple addEventListener (on-click) property on a single BUTTON. see in below eg.
+        let anotherMsg =  event => {console.log('I am Fucked')};
+        btnElement.addEventListener('click', anotherMsg);    // "CLICK" is a Event Listener, there are other also like "DOUBLE-CLICK", "RIGHT-CLICK".
+
+          // we can also remove addEventListener 
+        let anotherOne =  event => {console.log('I am Finished')};
+        btnElement.addEventListener('click', anotherOne);   
+        btnElement.removeEventListener('click', anotherOne);
+
+
+/*********************************************************************/        
         // Anonymous Functions as Values
 
         let sum = function (num1, num2) {   // if we don't use "let sum =" and directly assign function, then it will give error
@@ -60,9 +78,6 @@
         let intervalIds = setInterval(mossam, 1000);   
         setTimeout(() => clearInterval(intervalIds), 5000);    // here we used "anonymous function" inside setTimeout
 /***********************************************************************************/
-
-        // Event Listener
-        
     </script>
 </body>
 </html>

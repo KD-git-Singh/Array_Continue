@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>For Each Loop</title>
+</head>
+<body>
+    <script>
+        // old method to itrate
+       let foods = ['pizza', 'roti', 'dal', 'sabji'];
+       for(i = 0; i < foods.length; i++) {
+        console.log(foods[i]);
+       }
+
+       // new method (using forEach)
+       let malPani = ['pizza', 'roti', 'dal', 'sabji'];
+       malPani.forEach(function(khana) {
+        console.log(khana);
+       });
+          // we can also use "arrow-function" to short the above code
+        let petpuja = ['pizza', 'roti', 'dal', 'sabji'];
+        petpuja.forEach(edible => console.log(edible));
+          
+    </script>
+</body>
+</html>
